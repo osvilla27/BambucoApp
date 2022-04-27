@@ -1,0 +1,1 @@
+web: gunicorn bambuco.wsgi --log-file -

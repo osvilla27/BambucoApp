@@ -3,11 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Navigation } from './src/navigation/Navigation';
 
 function App() {
-
   return (
-      <NavigationContainer>
-        <Navigation />
-      </NavigationContainer>
+    <NavigationContainer>
+      <Navigation />
+    </NavigationContainer>
   );
 }
 

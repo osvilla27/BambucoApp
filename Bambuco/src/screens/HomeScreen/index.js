@@ -28,9 +28,9 @@ export const HomeScreen = () => {
       <View style={[shadow.dark, {height: 100, backgroundColor: 'red'}]}>
       <Text style={{color: colors.primary}}>Hola</Text>
       </View>
-      <TouchableOpacity onPress={() =>setThemeDark(!themeDark)}>
+      {/* <TouchableOpacity onPress={() =>setThemeDark(!themeDark)}>
           <Icon name='palette' size={30} color={!themeDark?colors.black:colors.light}/>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </StyledView>
   );
 }

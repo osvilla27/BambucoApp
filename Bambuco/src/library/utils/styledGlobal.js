@@ -17,6 +17,11 @@ export const ContainerJustify = styled.View`
   justify-content: ${props=>props.justify||'center'};
   align-items: ${props=>props.align||'center'};
 `
-
+export const ContainerImage = styled.ImageBackground`
+  flex: 1;
+  padding: 40px 40px;
+  justify-content: space-between;
+  align-items: center;
+`
 
 

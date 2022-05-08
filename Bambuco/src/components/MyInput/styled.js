@@ -6,13 +6,15 @@ export const Container = styled.View`
 `
 
 export const StyledInput = styled.TextInput`
-  font-size: 14px;
-  border-bottom-width: 2px;
+  font-size: 18px;
+  border-radius: 10px;
   width: 100%;
-  padding: 5px 0px
+  padding: 10px 10px;
+  background-color: white;
   color: gray;
   border-color: gray;
   ${props=>props.enabled&&`
+    border-width: 2px;
     border-color: #f75f6a;
     font-weight: bold
   `}

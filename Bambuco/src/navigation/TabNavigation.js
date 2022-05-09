@@ -1,26 +1,25 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { HomeScreen } from '../screens/HomeScreen';
-import {StyleSheet, Animated} from 'react-native';
 import {FavoriteScreen} from '../screens/FavoriteScreen';
 import {SearchScreen} from '../screens/SearchScreen';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { colors } from '../library/utils/theme';
 
 const tabs = [
   {
     name: 'Home',
-    icon: 'home',
+    icon: 'home-outline',
     screen: HomeScreen,
   },
   {
     name: 'Search',
-    icon: 'search',
+    icon: 'search-outline',
     screen: SearchScreen,
   },
   {
     name: 'Favorite',
-    icon: 'heart',
+    icon: 'heart-outline',
     screen: FavoriteScreen,
   },
 ];

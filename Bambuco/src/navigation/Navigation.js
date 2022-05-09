@@ -4,10 +4,14 @@ import SignUpScreen from '../screens/SignUpScreen';
 import SignInScreen from '../screens/SignInScreen';
 import TabNavigator from './TabNavigation';
 
+import { Provider } from "react-redux";
+import { store } from "../store";
+
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
   return (
+    <Provider store={store}>
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen
         name="SignUp" 
@@ -22,6 +26,7 @@ const Navigation = () => {
         component={TabNavigator}
       />
     </Stack.Navigator>
+    </Provider>
   );
 };
 

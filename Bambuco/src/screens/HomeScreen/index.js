@@ -5,13 +5,19 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import { StyledView } from './styled';
 import {colors, shadow } from '../../library/utils/theme';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { removeToken } from '../../services/AsyncStoregeService';
 
-
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}) => {
   const [students, setStudents] = useState([])
   const [themeDark, setThemeDark] = useState(false)
   console.log(students)
+
+  const handleLogout = async () => {
+    await removeToken()
+    navigation.navigate('SignUp');
+  }
+
   useEffect(()=>{
     async function getAllStudent() {
       try {
@@ -24,13 +30,14 @@ export const HomeScreen = () => {
     getAllStudent()
   }, [])
   return (
-    <StyledView style={[shadow.light]}>
-      <View style={[shadow.dark, {height: 100, backgroundColor: 'red'}]}>
-      <Text style={{color: colors.primary}}>Hola</Text>
-      </View>
-      {/* <TouchableOpacity onPress={() =>setThemeDark(!themeDark)}>
-          <Icon name='palette' size={30} color={!themeDark?colors.black:colors.light}/>
-      </TouchableOpacity> */}
-    </StyledView>
+    <View>
+
+      <TouchableOpacity onPress={() =>setThemeDark(!themeDark)}>
+          <Icon name='color-palette-outline' size={30} color={!themeDark?colors.black:colors.light}/>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={handleLogout}>
+          <Icon name='log-out' size={30} color={!themeDark?colors.black:colors.light}/>
+      </TouchableOpacity> 
+    </View>
   );
 }

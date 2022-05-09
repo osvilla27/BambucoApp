@@ -2,11 +2,16 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation';
 
+import { Context, Provider } from './src/context/globalContext';
+
 function App() {
   return (
-    <NavigationContainer>
-      <Navigation />
-    </NavigationContainer>
+    <Provider>
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
+    </Provider>
+    
   );
 }
 

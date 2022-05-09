@@ -8,7 +8,7 @@ import {colors, shadow } from '../../library/utils/theme';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ navigation }) => {
   const [students, setStudents] = useState([])
   const [themeDark, setThemeDark] = useState(false)
   console.log(students)

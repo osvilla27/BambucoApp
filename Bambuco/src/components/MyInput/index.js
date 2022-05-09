@@ -3,7 +3,7 @@ import { colors } from '../../library/utils/theme'
 import { TextMedium } from '../MyText'
 import { StyledInput, Container } from './styled'
 
-export const MyInput = ({ disabled, placeholder, onChangeText, value}) => {
+export const MyInput = ({ disabled, placeholder, onChangeText, value, secureTextEntry}) => {
   return (
     <Container>
       <StyledInput 
@@ -11,6 +11,7 @@ export const MyInput = ({ disabled, placeholder, onChangeText, value}) => {
         placeholder={placeholder}
         onChangeText={onChangeText}
         value={value}
+        secureTextEntry={secureTextEntry}
       />
     </Container>
   )
